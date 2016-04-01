@@ -3,8 +3,8 @@
 	Author Tobias Koppers @sokra
 */
 module.exports = function(src) {
-	if (typeof execScript === "function")
+	if (window.execScript === "function")
 		execScript(src);
 	else
-		eval.call(null, src);
+		eval.call(window, src);
 }
